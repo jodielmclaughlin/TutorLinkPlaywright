@@ -23,7 +23,7 @@ export default defineConfig({
   reporter: 'html',
   use: {
     browserName : process.env.BROWSER,
-    headless : false,
+    headless : true,
     screenshot: 'only-on-failure',
     baseURL: process.env.BASE_URL,
     trace: 'on-first-retry',

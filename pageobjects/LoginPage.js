@@ -4,6 +4,8 @@ export class LoginPage{
         this.userNameInput = page.getByPlaceholder("Enter your email");
         this.passwordInput = page.getByPlaceholder("Enter your password"); 
         this.loginButton = page.getByRole('button', { name: 'Login' });
+        this.errorMessage = page.locator("p:has-text('Invalid email address')");
+        this.passwordErrorMessage = page.locator("p:has-text('Password is required')")
     }
 
     async goTo() {
